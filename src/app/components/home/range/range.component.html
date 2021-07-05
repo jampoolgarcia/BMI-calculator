@@ -1,0 +1,8 @@
+<div class="bg-item">
+  <p class="mb-0">height</p>
+  <div class="fs-1 fw-bold mt-0">
+    {{value}}
+    <span class="fs-6 fst-italic">cm</span>
+  </div>
+  <input type="range" (input)="changeHeight($event)" [value]="value" min="120" max="300" class="form-range px-4">
+</div>

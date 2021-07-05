@@ -3,33 +3,23 @@
     <h1 class="title text-white text-center mt-4">BMI Calculator</h1>
     <div class="row">
       <div class="col-lg-6 mb-4">
-        <div class="bg-item">
-          
-        </div>
+        <app-sex icon="fa fa-mars icon" title="Man"></app-sex>
       </div>
       <div class="col-lg-6 mb-4">
-        <div class="bg-item">
-          
-        </div>
+       <app-sex icon="fa fa-venus icon" title="Woman"></app-sex>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-12 mb-4">
-        <div class="bg-item">
-
-        </div>
+        <app-range [value]="heigth"></app-range>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-6 mb-4">
-        <div class="bg-item">
-          
-        </div>
+        <app-number [value]='weight' title="weight"></app-number>
       </div>
       <div class="col-lg-6 mb-4">
-        <div class="bg-item">
-          
-        </div>
+        <app-number [value]='age' title="Age"></app-number>
       </div>
     </div>
     <div class="row">

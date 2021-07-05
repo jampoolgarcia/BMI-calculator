@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  public age = 0;
+  public weight= 0;
+  public heigth = 170;
+
   constructor() { }
 
   ngOnInit(): void {
