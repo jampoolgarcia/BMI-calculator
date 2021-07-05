@@ -3,10 +3,10 @@
     <h1 class="title text-white text-center mt-4">BMI Calculator</h1>
     <div class="row">
       <div class="col-lg-6 mb-4">
-        <app-sex icon="fa fa-mars icon" title="Man"></app-sex>
+        <app-sex icon="fa fa-mars icon" value="man"  (sexEmitter)="changeSex($event)" [sex]="sex"></app-sex>
       </div>
       <div class="col-lg-6 mb-4">
-       <app-sex icon="fa fa-venus icon" title="Woman"></app-sex>
+       <app-sex icon="fa fa-venus icon" value="woman" (sexEmitter)="changeSex($event)" [sex]="sex"></app-sex>
       </div>
     </div>
     <div class="row">
@@ -19,7 +19,7 @@
         <app-number [value]='weight' title="weight"></app-number>
       </div>
       <div class="col-lg-6 mb-4">
-        <app-number [value]='age' title="Age"></app-number>
+        <app-number [value]='age' title="age"></app-number>
       </div>
     </div>
     <div class="row">

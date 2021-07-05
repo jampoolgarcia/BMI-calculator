@@ -11,10 +11,15 @@ export class HomeComponent implements OnInit {
   public age = 0;
   public weight= 0;
   public heigth = 170;
+  public sex = '';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeSex(sex: string){
+    this.sex = sex;
   }
 
 }

@@ -20,6 +20,10 @@ body{
   align-items: center;
 }
 
+.cursor-poin{
+  cursor: pointer;
+}
+
 .btn-color {
   width: 100%;
   background-color: #FF3366;
