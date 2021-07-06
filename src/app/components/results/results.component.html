@@ -1,1 +1,21 @@
-<p>results works!</p>
+<div class="row">
+  <div class="col-lg-4 offset-lg-4">
+    <h2 class="title text-white text-center mt-4">Results</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="bg-item">
+          <h4 class="ward fs-4 fw-bold text-uppercase py-4" [ngClass]="{'text-success': isSuccess}">{{ result }}</h4>
+          <p class="fs-0 fw-bold">{{ BMI }}</p>
+          <p class="fs-6 m-4 text-center">{{ interpretation }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <button routerLink="['/']" class="btn btn-primary btn-lg btn-color mt-4">
+          Recalculate
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

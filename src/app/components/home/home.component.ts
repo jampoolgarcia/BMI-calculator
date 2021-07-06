@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  public age = 0;
-  public weight= 0;
+  public age = 18;
+  public weight= 60;
   public heigth = 170;
   public sex = '';
 
@@ -19,13 +19,25 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeSex(sex: string){
+  setSex(sex: string){
     this.sex = sex;
   }
 
+  setHeigth(heigth: number){
+    this.heigth = heigth;
+  }
+
+  setWeight(weight: number){
+    this.weight = weight;
+  }
+
+  setAge(age: number){
+    this.age = age;
+  }
+
   calculatorBMI(){
-    console.log('calculatorBMI');
-    this.router.navigate(['/results']);
+    const BMI = this.weight / Math.pow((this.heigth / 100), 2);
+    this.router.navigate(['/results', BMI.toFixed(1)]);
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-range',
@@ -13,11 +13,14 @@ export class RangeComponent implements OnInit {
 
   @Input() value!: number;
 
+  @Output() rangeEmitter = new EventEmitter<number>();
+
   constructor() { }
 
   changeHeight(event: any){
     const { valueAsNumber } = event.target;
     this.value = valueAsNumber;
+    this.rangeEmitter.emit(this.value);
   }
 
   ngOnInit(): void {

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-number',
@@ -21,6 +21,8 @@ export class NumberComponent implements OnInit {
   
   @Input() title: string = '';
   @Input() value: number = 0;
+  
+  @Output() valueEmitter = new EventEmitter<number>();
 
   constructor() { }
 
@@ -29,10 +31,12 @@ export class NumberComponent implements OnInit {
 
   sum(){
     this.value+=1;
+    this.valueEmitter.emit(this.value);
   }
 
   sub(){
     this.value-=1;
+    this.valueEmitter.emit(this.value);
   }
 
 }
